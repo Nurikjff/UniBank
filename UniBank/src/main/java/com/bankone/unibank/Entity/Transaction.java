@@ -11,7 +11,7 @@ import java.time.ZonedDateTime;
  *
  * @author Nurlan Jafarov
  */
-public class Transaction {
+public class Transaction implements Comparable<Transaction>{
     private String numberOfTransaction;
     private Account fromAccount;
     private Account toAccount;
@@ -75,5 +75,23 @@ public class Transaction {
     public void setAmmount(double ammount) {
         this.ammount = ammount;
     }
+
+    @Override
+    public int compareTo(Transaction o) {
+        if(this.ammount<o.ammount)
+        {
+        return 1;
+        }
+        else
+        {
+        if(this.ammount<o.ammount)
+        {
+        return 0;
+        }
+        else{
+          return -1;
+        }
+        }
+        }
     
 }
