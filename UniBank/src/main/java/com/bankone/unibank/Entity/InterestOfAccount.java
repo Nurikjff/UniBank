@@ -11,7 +11,7 @@ package com.bankone.unibank.Entity;
  */
 public class InterestOfAccount {
     private String numberOfAccount;
-    private String interestRate;
+    private double interestRate;
 
     public String getNumberOfAccount() {
         return numberOfAccount;
@@ -21,11 +21,11 @@ public class InterestOfAccount {
         this.numberOfAccount = numberOfAccount;
     }
 
-    public String getInterestRate() {
+    public double getInterestRate() {
         return interestRate;
     }
 
-    public void setInterestRate(String interestRate) {
+    public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }
 

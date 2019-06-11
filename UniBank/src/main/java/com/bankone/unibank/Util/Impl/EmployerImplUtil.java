@@ -17,12 +17,28 @@ public class EmployerImplUtil implements EmployerInterUtil{
 
     @Override
     public boolean acceptAccount(Account account) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          if(account.getAccountOfCustomer() != null && account.getAmountOfMoney()>=0 && account.getTypeOfAccount()!=null)
+          {
+            return true;
+          }
+          else {
+            return false;
+          }
+          
     }
 
     @Override
     public boolean lookPersonalDataOfEachClient(Customers customers) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         if(customers != null)
+         {
+           return true;
+         }
+         else
+         {
+           return false;
+         }
     }
+    
+    
     
 }

@@ -17,8 +17,11 @@ import java.util.List;
  */
 public interface CustomerInterUtil {
     public boolean LogInAccount(String login, String password);
-    public boolean RequestForNewAccount(String NumberOfAccount, double AmountOfMoney, String typeOfAccount, Customers amountOfCustomers, int transactionNumberForTransfer);
-    public boolean OpenNewAccount(Account account);
+    public boolean RequestForNewAccount(double AmountOfMoney, String typeOfAccount, Customers userCustomers);
+    public List<Transaction>getAllTransactions();
      public List<Transaction>getALlTransactionsbetweenDate(ZonedDateTime startTime,ZonedDateTime endTime);
     public List<Transaction>getAllTransactionsPerAccount(Account account);
+    public List<Customers>getAllCustomersList();
+    public List<Account>getAllAccountList();
+        public List<Account>getAllAccountListByCustmer(Customers customer);
 }
